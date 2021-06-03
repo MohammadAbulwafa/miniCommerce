@@ -297,15 +297,17 @@ button#add-to-cart:hover {
 #about .who h3{
     color: var(--prim-black);
     font-weight:600;
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 0px;
 } 
 #about .who p{
     margin-top: 0px;
+    font-size: 25px;
 } 
 .stolen-about{
     margin-top: 50px;
     color: var(--sec-black);
+    font-size: 25px;
 }
 /*--------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------ End ---- About page -----------------------------------------*/
@@ -316,6 +318,7 @@ button#add-to-cart:hover {
 /*--------------------------------------------------------------------------------------------------------*/
 #contact-us{
     color: #888;
+    font-size: 20px;
 }
 #contact-us h2{
     position: relative;
@@ -378,6 +381,7 @@ label {
 /*------------------------------------------------------------------------------------------------------*/
 #shopping-cart{
     color: var(--sec-black);
+    font-size: 20px;
 }
 #shopping-cart h2{
     position: relative;
