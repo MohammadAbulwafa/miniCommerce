@@ -113,13 +113,13 @@ main{
     box-shadow: 0 0 10px var(--sec-white);
 }
 .product .img-container{
-    height: 195px;
+    height: 230px;
     display: flex;
     align-items: center;
 }
 .product img{
     border-radius:5px 5px 0 0;
-    max-height: 200px;
+    max-height: 260px;
 }
 .product .p-price {
     font-size: 20px;
@@ -152,8 +152,8 @@ main{
     text-align: center;
     margin: 16px auto;
     border: 1px solid var(--sec-white);
-    width: 130px;
-    padding: 7px;
+    width: 160px;
+    padding: 10px;
     border-radius: 5px;
     display: block;
     background-color: transparent;
@@ -171,6 +171,7 @@ main{
     top: 50%;
     right: 10px;
     opacity: .6;
+    font-size: 20px;
 }
 .checkout a{
     display: flex;
@@ -180,8 +181,8 @@ main{
 }
 .p-count {
     background: yellow;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -206,6 +207,7 @@ main{
 }
 .single-product p{
     color: #777;
+    font-size: 19px;
 }
 .product-img{
     width: 25%;
@@ -222,11 +224,12 @@ main{
 }
 .product-content h3 {
     margin-top: 0;
+    font-size: 24px;
 }
 .product-content .cat {
     color: var(--third-black);
     font-weight: 600;
-    font-size: 13px;
+    font-size: 18px;
 }
 .Product-Availability{
     width: 25%;
@@ -245,17 +248,17 @@ main{
     font-weight: 600;
 }
 .Product-Availability .qty p{
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-transform: capitalize;
 }
 .Product-Availability .qty input[type="text"],
 button#add-to-cart {
     border-radius: 20px;
-    width: 170px;
-    height: 35px;
-   
+    width: 180px;
+    height: 40px;
     border: 1px solid #bbb;
     color: #666;
+    font-size: 19px;
 }
 .Product-Availability .qty input[type="text"]{
     padding-left: 10px;
