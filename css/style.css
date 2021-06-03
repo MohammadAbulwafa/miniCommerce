@@ -1,0 +1,461 @@
+/*--------------------------------------------------*/
+/*------------------ Global Style ----------------- */
+/*--------------------------------------------------*/
+
+/* trying adding a font */
+@font-face {
+	Src: url(../fonts/lato-lig-webfont.ttf);
+	Font-family: 'Myfont';
+	font-style: normal;
+    font-weight: 300; 
+}
+@font-face {
+	Src: url(../fonts/lato-bol-webfont.woff);
+	Font-family: 'Myfont';
+	font-style: normal;
+    font-weight: 900; 
+}
+/* 1168ff */
+:root{
+    --prim-blue:#548db1;
+    --prim-white:#fff;
+    --sec-white:#ddd;
+    --prim-black:#000;
+    --sec-black:#666;
+    --third-black:#bbb;
+}
+*,html,body{
+    transition: all .3s ease-in-out;
+    font-family: 'Myfont', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+.btn-primary{
+    margin: 16px auto;
+    border: 1px solid var(--sec-white);
+    width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+.btn-primary:hover {
+    background: var(--prim-blue);
+    border-color: var(--prim-blue);
+    color: var(--prim-white);
+    cursor: pointer;
+}
+/*-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------  Home Page ------------------------------------------------- */
+/*-------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------*/
+/*------------------ header ----------------- */
+/*--------------------------------------------*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: linear-gradient( 135deg , #548db1 0%, #544d92 100%);
+    color: #eee;
+    z-index: 1;
+}
+header a {
+    text-transform: capitalize;
+    padding: 10px;
+    color:var(--sec-white);
+    font-size: 20px;
+}
+header a:hover{
+    color: var(--prim-white);
+}
+
+/*--------------------------------------------*/
+/*------------------- Main  ----------------- */
+/*--------------------------------------------*/
+main{
+    margin-top: 120px;   
+}
+.product-list{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product-list .product{
+    width: calc(92%/3);
+    margin-bottom: 30px;
+    border-radius:5px 5px 0 0;
+    padding-bottom: 10px;
+}
+.product:hover {
+    box-shadow: 0 0 10px var(--sec-white);
+}
+.product .img-container{
+    height: 195px;
+    display: flex;
+    align-items: center;
+}
+.product img{
+    border-radius:5px 5px 0 0;
+    max-height: 200px;
+}
+.product .p-price {
+    color: red;
+    font-weight: bold;
+}
+.product .p-name,
+.p-name a {
+    color: var(--prim-blue);
+    font-weight: bold;
+}
+.product .p-descrition,
+ .to-cart {
+    color: var(--sec-black);
+    font-size: 0.9rem;
+}
+/* i wanted to make it short description that ends with ... but it deos not look nice (Done in js file)
+.product .p-descrition{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+*/
+.product > p {
+    margin: 7px 0;
+    padding: 0 10px 0 15px;
+}
+.product .to-cart {
+    text-align: center;
+    margin: 16px auto;
+    border: 1px solid var(--sec-white);
+    width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    display: block;
+    background-color: transparent;
+}
+.to-cart:hover {
+    background: var(--prim-blue);
+    border-color: var(--prim-blue);
+    color: var(--prim-white);
+    outline: none;
+    cursor: pointer;
+}
+
+.checkout{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    opacity: .6;
+}
+.checkout a{
+    display: flex;
+    flex-direction: column-reverse;
+    color: var(--prim-black);
+    align-items: center;
+}
+.p-count {
+    background: yellow;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-total-price {
+    margin: 0 2px;
+}
+.checkout:hover {
+    opacity: 1;
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ End ^^^^^ Home page --------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------- Start ---- Single Product -------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+.single-product{
+    display: flex; 
+}
+.single-product p{
+    color: #777;
+}
+.product-img{
+    width: 25%;
+}
+.product-img img{
+    box-shadow: 0 0 10px var(--sec-white);
+    border-radius: 5px;
+}
+.product-content{
+    width: 50%;
+    padding-left: 20px;
+    width: 50%;
+    border-right: 1px solid #eee;
+}
+.product-content h3 {
+    margin-top: 0;
+}
+.product-content .cat {
+    color: var(--third-black);
+    font-weight: 600;
+    font-size: 13px;
+}
+.Product-Availability{
+    width: 25%;
+    padding-left: 20px;
+}
+.Product-Availability .Avability{
+    color:var(--prim-black);
+    margin-top: 0px;
+}
+.Product-Availability .Avability span{
+    color: #54c454;
+}
+.Product-Availability .Price {
+    font-size: 20px;
+    color: var(--prim-blue);
+    font-weight: 600;
+}
+.Product-Availability .qty p{
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+.Product-Availability .qty input[type="text"],
+button#add-to-cart {
+    border-radius: 20px;
+    width: 170px;
+    height: 35px;
+   
+    border: 1px solid #bbb;
+    color: #666;
+}
+.Product-Availability .qty input[type="text"]{
+    padding-left: 10px;
+    caret-color: var(--prim-blue);  
+}
+.Product-Availability .qty input[type="text"]:focus{
+    border-color:var(--prim-blue);
+}
+button#add-to-cart {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: var(--prim-blue);
+    color: var(--prim-white);
+    border-color:var(--prim-blue);
+}
+button#add-to-cart:hover {
+    background-color: transparent;
+    color: var(--prim-blue);
+    border-color: var(--prim-blue);
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ End ^^^^^^ Product page -------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ Start ---- About page ---------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+#about{
+    color: #aaa;
+}
+#about .who{
+    text-align: center;
+} 
+#about .who h3{
+    color: var(--prim-black);
+    font-weight:600;
+    font-size: 30px;
+    margin-bottom: 0px;
+} 
+#about .who p{
+    margin-top: 0px;
+} 
+.stolen-about{
+    margin-top: 50px;
+    color: var(--sec-black);
+}
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ End ---- About page -----------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ Start ---- Contact Us ---------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+#contact-us{
+    color: #888;
+}
+#contact-us h2{
+    position: relative;
+}
+#contact-us h2::after {
+    content: " ";
+    position: absolute;
+    bottom: -15px;
+    left: 1px;
+    width: 183px;
+    height: 3px;
+    background-image: linear-gradient(45deg, yellow, transparent);
+}
+#contact-us .parent{
+    display: flex;
+    justify-content: space-between;
+}
+#contact-us .parent>div{
+    width: 48%;
+}
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+#contact-us input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #aaa;
+}
+#contact-us textarea {
+    overflow: auto;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 5px;
+}
+#contact-us button{
+    text-align: center;
+    margin: 16px auto;
+    border: 1px solid var(--sec-white);
+    width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+}
+#contact-us button:hover {
+    background: var(--prim-blue);
+    border-color: var(--prim-blue);
+    color: var(--prim-white);
+    outline: none;
+    cursor: pointer;
+}
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ End ^^^^ Contact Us -----------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------- Start ---- Shopping-Cart ------------------------------------*/
+/*------------------------------------------------------------------------------------------------------*/
+#shopping-cart{
+    color: var(--sec-black);
+}
+#shopping-cart h2{
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+#shopping-cart h2::after {
+    content: " ";
+    position: absolute;
+    bottom: -15px;
+    left: 1px;
+    width: 183px;
+    height: 3px;
+    background-image: linear-gradient(45deg, yellow, transparent);
+}
+#shopping-cart .list-items{
+    display: grid;
+    grid-template-columns: 40% 10% 30% 10% 10%;
+}
+.list-items>div {
+    margin-bottom: 20px;
+    place-self: center;
+}
+.list-items .pro{
+    display: grid;
+    grid-template-columns: 20% 75%;
+    justify-content: space-between;
+}
+.list-items .pro>* {
+    align-self: center;
+}
+.pro img{
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+.pro-head,
+.price-head,
+.qty-head,
+.total-head,
+.remove-head{
+    font-weight: bold;
+}
+.list-items input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    color:var(--sec-black);
+    border: 1px solid #aaa;
+}
+.list-items .remove i{
+    cursor: pointer;
+}
+.list-items .remove i:hover{
+    color:red;
+}
+#grand-total{
+    float: right;
+    margin-bottom: 50px;
+}
+#btn-remove-all{
+    text-align: center;
+    margin: 16px auto;
+    border: 1px solid #ff0808;
+    color: red;
+    width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    display: block;
+    background-color: transparent;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+#btn-remove-all:hover{
+    background-color:red;
+    color: var(--prim-white);
+}
+#grand-total h2{
+    margin-bottom: 35px;
+    font-size: 22px;
+}
+.t {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color:var(--prim-blue)
+}
+.t :nth-last-child(1){
+    color: orangered;
+    
+}
+/*--------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ End ^^^^ Shopping-Cart --------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/

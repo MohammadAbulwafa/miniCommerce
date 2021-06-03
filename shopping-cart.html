@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping-Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Nav Manu -->
+    <header>
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="contact-us.html">contact us</a>
+    </header>
+
+    <!-- shopping cart -->
+    <main>
+        <div class="container">
+            <div id="shopping-cart">
+                
+                <h2>cart</h2>
+                
+                <div id="cart-list-items" class="list-items">
+                    
+                    <!---------------------------------->
+                    <!------ using grid -- first try---->
+                    <!---------------------------------->
+
+                    <!-- start -->
+                    <div class="pro-head"> 
+                        Product
+                    </div>
+
+                    <div class="price-head">
+                        Price
+                    </div>
+
+                    <div class="qty-head">
+                        Quantity
+                    </div>
+
+                    <div class="total-head">
+                        Total
+                    </div>
+
+                    <div class="remove-head">
+                        Remove
+                    </div>
+                    <!-- end -->
+
+                    <!-- start -->
+                    <div class="pro">
+                        
+                        <div class="img-container">
+                            <a href="product.html?ProductID=HT-1000"><img src="item2.png" alt="img"></a>
+                        </div>
+                        <a href="product.html?ProductID=HT-1000"><span>notebook professional 15</span></a>
+                                                    
+                    </div>
+
+                    <div class="price">
+                        $1999
+                    </div>
+
+                    <div class="qty">
+                        <input type="text" value="1" minlength="0">
+                    </div>
+
+                    <div class="total">
+                        $1999
+                    </div>
+
+                    <div class="remove">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <!-- end -->
+                    
+                    <!-- start -->
+                    <div class="pro">
+                        <div class="img-container">
+                            <img src="item2.png" alt="img">
+                        </div>
+                        <span>notebook professional 15</span>
+                    </div>
+
+                    <div class="price">
+                        $1999
+                    </div>
+
+                    <div class="qty">
+                        <input type="text" value="1" minlength="0">
+                    </div>
+
+                    <div class="total">
+                        $1999
+                    </div>
+
+                    <div class="remove">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <!-- end -->
+
+                    <!-- start -->
+                    <div class="pro">
+                        <div class="img-container">
+                            <img src="item2.png" alt="img">
+                        </div>
+                        <span>notebook professional 15</span>
+                    </div>
+
+                    <div class="price">
+                        $1999
+                    </div>
+
+                    <div class="qty">
+                        <input type="text" value="1" minlength="0">
+                    </div>
+
+                    <div class="total">
+                        $1999
+                    </div>
+
+                    <div class="remove">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <!-- end -->
+                    
+                </div>
+                
+                <div><button id="btn-remove-all" onclick="removeAllItems()">Remove All</button></div>
+                
+                
+                <div id="grand-total">
+                    <h2>Cart Total</h2>
+                    <div class="t">
+                        <span>Total</span>
+                        <span id="grandTotal">$19995</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

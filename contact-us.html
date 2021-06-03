@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact-Us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+       <!-- Nav Manu -->
+        <header>
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="contact-us.html">contact us</a>
+        </header>
+
+        <!-- contact form -->
+        <main>
+            <div class="container">
+                <div id="contact-us">
+                    
+                    <h2>leave us a message</h2>
+                    
+                    <form id="formMessage">
+
+                        <div class="parent">
+                            <div>
+                                <label for="Name">Name</label>
+                                <input type="text" class="form-control" id="Name" placeholder="Enter your name">
+                            </div>
+
+                            <div>
+                                <label for="Email">Email address</label>
+                                <input type="email" class="form-control" id="Email" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div>
+                          <label for="text">Subject</label>
+                          <input type="text" class="form-control" id="Subject" placeholder="Subject">
+                        </div>
+
+                        <div>
+                            <label for="text">Message</label>
+                            <textarea id="Message" cols="30" rows="10" placeholder="We will hear you"></textarea>
+                        </div>
+
+                        <button id="btnContact" type="submit" class="btn btn-primary">Submit</button>
+
+                      </form>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- checkout icon  -->
+        <div class="checkout">
+            <a href="shopping-cart.html">
+                <sapn id="cart-items-count" class="p-count">0</sapn>
+                <sapn id="cart-total-price" class="p-total-price">$0.00</sapn>
+                <sapn> <i class="fas fa-shopping-cart fa-sm"></i> Checkout</sapn>
+            </a>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
